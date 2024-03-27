@@ -1,15 +1,17 @@
-import '../Header.css'
-import {Link} from 'react-router-dom'
+import '../styles/Header.css'
 import logoText from '../assets/logoText.svg'
 import logo from '../assets/logo.svg'
 import carrito from '../assets/menu/carrito.svg'
 import iniciarSesion from '../assets/menu/iniciarSesion.svg'
 import salirS from '../assets/menu/salirSesion.svg'
 import logoHam from '../assets/menuHam.svg'
+
+import {Link} from 'react-router-dom'
 import { useState } from 'react'
 
 
 export function Header(props){
+    //Change the state of loggedIn to false, if is clicked.
     const onCerrarSesion = () =>{
         props.setLoggedIn(false)
     }

@@ -1,7 +1,8 @@
-import '../OpcionProducto.css'
-import { useNavigate } from "react-router-dom"
+import '../styles/OpcionProducto.css'
 import regresarIcon from '../assets/botonRegresar.svg'
 import logoTexto from '../assets/logoConTexto.svg'
+
+import { useNavigate } from "react-router-dom"
 import { useEffect } from 'react';
 
 export function EliminarP({loggedIn}) {

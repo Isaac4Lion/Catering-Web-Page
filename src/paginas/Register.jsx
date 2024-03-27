@@ -1,11 +1,12 @@
-import '../Login.css'
-import { useNavigate } from 'react-router-dom'
+import '../styles/Login.css'
 import regresarIcon from '../assets/botonRegresar.svg'
 import logoTexto from '../assets/logoConTexto.svg'
-import { usuarios } from '../dataUsuarios.js'
-import { useState, useEffect } from 'react'
+
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 import {Link} from 'react-router-dom'
 
+//This part of project was omited, and the functionality doesn't work
 export function Register(){
     const navigate = useNavigate();
 

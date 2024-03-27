@@ -1,8 +1,9 @@
-import '../Carrito.css'
-import { useNavigate } from 'react-router-dom'
+import '../styles/Carrito.css'
 import regresarIcon from '../assets/botonRegresar.svg'
 import logoTexto from '../assets/logoConTexto.svg'
 import xItem from '../assets/xItem.svg'
+
+import { useNavigate } from 'react-router-dom'
 
 export function Carrito({allProducts, setAllProducts, total, countProducts, setCountProducts, setTotal}){
     const navigate = useNavigate();
@@ -10,6 +11,8 @@ export function Carrito({allProducts, setAllProducts, total, countProducts, setC
         let path = `/`
         navigate(path)
     }
+
+    //Deletes products on shopping cart one by one
     const onDeleteProduct = product =>{
         if (product.cantidad===1){
             const results = allProducts.filter(item => item.id !== product.id);
@@ -24,6 +27,7 @@ export function Carrito({allProducts, setAllProducts, total, countProducts, setC
 
     }
 
+    //Alert the user that their purchase has been made, or if shopping cart doesn't have products.
     const onPagar= ()=>{
         if(allProducts.length > 0){
             window.alert("Se ha relizado la compra correctamente \nGracias por preferirnos ☺")

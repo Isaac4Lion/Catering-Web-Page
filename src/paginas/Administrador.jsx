@@ -1,4 +1,4 @@
-import '../Administrador.css'
+import '../styles/Administrador.css'
 import { useNavigate } from 'react-router-dom'
 import regresarIcon from '../assets/botonRegresar.svg'
 import logoTexto from '../assets/logoConTexto.svg'
@@ -10,16 +10,20 @@ import {Link} from 'react-router-dom'
 
 export function Administrador({loggedIn, setLoggedIn}){
     const navigate = useNavigate();
+    //Function that return to the login page
     const retornar = () =>{
         setLoggedIn(false)
         let path = `/login`
         navigate(path)
     }
+
+    //Used if user want to skip the security
     useEffect(()=>{
         if (!loggedIn){
             retornar()
         }
-        })
+    })
+
     return (
         <div className='pageCarrito'>
             <button onClick={retornar} className='botonRegresar'><img src={regresarIcon} alt="Regresar" /></button>

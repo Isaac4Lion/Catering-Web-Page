@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import '../Productos.css'
+import '../styles/Productos.css'
 import {productos} from '../dataProductos.js'
+
+import { useState } from 'react'
 import Popup from 'reactjs-popup'
 
-
 export function Productos({allProducts,setAllProducts, total, setTotal, countProducts, setCountProducts, loggedIn}){
-
+    //Add products to the shopping cart
     const onAddProduct = product =>{
         if (!loggedIn){
             window.alert("Debes ingresar sesión para pedir productos")
@@ -24,8 +24,8 @@ export function Productos({allProducts,setAllProducts, total, setTotal, countPro
             setAllProducts([...allProducts, product])
         }
     }
-    const [popupContent, setPopupContent] = useState('');
-    
+    //Content of popup change on different products on mouse enter
+    const [setPopupContent] = useState('');
     return (
         <div className="containerPr">
             <h1>PLATOS A LA CARTA</h1>

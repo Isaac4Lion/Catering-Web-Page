@@ -1,9 +1,11 @@
-import '../Login.css'
-import { useNavigate } from 'react-router-dom'
+import '../styles/Login.css'
 import regresarIcon from '../assets/botonRegresar.svg'
 import logoTexto from '../assets/logoConTexto.svg'
+
 import { usuarios } from '../dataUsuarios.js'
 import { admins } from '../dataAdmins.js'
+
+import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 
@@ -19,9 +21,10 @@ export function Login({loginAdmin,setLoginAdmin, loggedIn, setLoggedIn}){
         }
     }
     
-    const [usuario, setUsuario] = useState('')
-    const [password, setPassword] = useState('')
+    const [usuario, setUsuario] = useState('');
+    const [password, setPassword] = useState('');
 
+    //Handle the form values enters by user.
     function handleChangeUsuario(event) {
         setUsuario(event.target.value);
     }
@@ -31,6 +34,8 @@ export function Login({loginAdmin,setLoginAdmin, loggedIn, setLoggedIn}){
 
     const onLogginButton = () => {
         var encontrado=false
+
+        //First check if is admin or not, then check the data with the user input
         if (!loginAdmin){
             encontrado = usuarios.find(user => usuario === user.usuario && password === user.password)
         }else{
@@ -55,11 +60,12 @@ export function Login({loginAdmin,setLoginAdmin, loggedIn, setLoggedIn}){
         return loginAdmin
     }
 
+    //Then that log in redirect to the page specified
     useEffect(() => {
         if(loggedIn){
             retornar()
         }
-    }, [loggedIn])
+    });
 
     return (
         <>

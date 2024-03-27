@@ -1,4 +1,4 @@
-import '../Servicios.css'
+import '../styles/Servicios.css'
 import {servicios} from '../dataServicios.js'
 import xItem from '../assets/xItem.svg'
 import { useState } from 'react';
@@ -8,19 +8,19 @@ export function Servicios(){
     const [open, setOpen] = useState(false);
     const [contentDialog, setContentDialog] = useState('')
     const [title, setTitle] = useState('')
-    const [imagen, setImagen] = useState('')
+    const [setImagen] = useState('')
 
+    //Handle that open a dialog with his properities by service id
     const handleClickToOpen = product => {
         setTitle(product.nombreProducto)
         setContentDialog(product.descripcion)
         setOpen(true)
         setImagen(product.imagenServicio)
     }
-
+    //Close the dialog
     const handleToClose = () => {
         setOpen(false)
     }
-
     return (
         <div className="containerPr">
             <h1>SERVICIOS</h1>

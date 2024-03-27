@@ -1,4 +1,4 @@
-import '../OpcionProducto.css'
+import '../styles/OpcionProducto.css'
 import { useNavigate } from "react-router-dom"
 import regresarIcon from '../assets/botonRegresar.svg'
 import logoTexto from '../assets/logoConTexto.svg'

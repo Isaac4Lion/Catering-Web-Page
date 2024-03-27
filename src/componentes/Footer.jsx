@@ -1,4 +1,4 @@
-import '../Footer.css'
+import '../styles/Footer.css'
 import logoTexto from '../assets/logoConTexto.svg'
 import insta from '../assets/instagramLogo.svg'
 import face from '../assets/facebookLogo.svg'
