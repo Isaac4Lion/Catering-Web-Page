@@ -1,0 +1,56 @@
+.contenedorAdmin{
+    background-color: #F5D123;
+    margin: 2em 10em;
+    border: 3px solid #000;
+    border-radius: 30px;
+}
+.opcionesAdmin{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2em;
+    margin: 0 5dvw 2em 5dvw;
+}
+.opcionAdmin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.opcionAdmin img{
+    width: 15dvw;
+}
+.contenedorOpcion{
+    background-color: #F5D123;
+    margin: 2em 10em;
+    border: 3px solid #000;
+    border-radius: 30px;
+}
+@media (max-width:900px ) {
+    .contenedorAdmin button{
+        font-size: .8em;
+    }
+    .opcionesAdmin{
+        gap: .5em
+    }
+}
+@media (max-width:850px) {
+    .contenedorAdmin{
+        margin: .9em 10em;
+    }
+    .opcionAdmin img{
+        width: 10dvw;
+    }
+    .opcionesAdmin{
+        flex-direction: column;
+        align-items: center;
+    }
+    .opcionAdmin{
+        gap: .5em;
+    }
+}
+@media (max-width:850px) {
+    .contenedorAdmin{
+        margin: .9em 2em;
+    }
+}

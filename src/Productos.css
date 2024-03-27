@@ -1,0 +1,119 @@
+.containerPr{
+    margin-top:20dvh;
+}
+.containerPr h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+.productos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 20dvh;
+}
+.producto{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #E5E5E5;
+    margin: .5em 1em;
+}
+.producto img{
+    height: 28dvh;
+    transition: .3s;
+}
+.producto img:hover{
+    cursor: pointer;
+    scale: 0.8;
+}
+
+.producto button{
+    width: 100%;
+    border-radius: 0;
+    background-color: #F3EFE6;
+    color: black;
+}
+.producto button:hover{
+    border: 0;
+}
+.popup-content {
+    margin: auto;
+    text-align: justify;
+    background: #f5ebe0;
+    width: 50%;
+    padding: 15px;
+}
+[role='tooltip'].popup-content {
+    width: 20dvw;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 0px 3px;
+}
+.popup-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+[data-popup='tooltip'].popup-overlay {
+  background: transparent;
+}
+
+/*Animacion para POPUP*/
+@keyframes anvil {
+    0% {
+      transform: scale(1) translateY(0px);
+      opacity: 0;
+      box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+    1% {
+      transform: scale(0.96) translateY(10px);
+      opacity: 0;
+      box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+    100% {
+      transform: scale(1) translateY(0px);
+      opacity: 1;
+      box-shadow: 0 0 500px rgba(241, 241, 241, 0);
+    }
+}
+.popup-content {
+    -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+    animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+}
+
+@media (max-width:1280px) {
+    .producto img{
+        height: 20dvh;
+    }
+}
+@media (max-width:1000px) {
+    .productos{
+        margin: 0 2dvw;
+    }
+}
+@media (max-width:900px) {
+    #root{
+        width: 100%;
+    }
+    .productos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:750px) {
+    #root{
+        width: auto;
+    }
+    .productos{
+        grid-template-columns: 1fr;
+        margin: 0 15dvw;
+    }
+    .containerPr h1{
+        font-size: 2em;
+    }
+}
+@media (max-width:530px) {
+    #root{
+        width: 100%;
+    }
+    .productos{
+        margin: 0;
+    }
+    .containerPr h1{
+        font-size: 2em;
+    }
+}

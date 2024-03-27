@@ -1,0 +1,38 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20dvh;
+    padding: 3dvh 0;
+    background-color: #F5D123;
+}
+.contactanos span{
+    font-weight: 700;
+}
+.redes img{
+    margin: 0 .5em;
+    width: 2dvw;
+    transition: .3s;
+}
+.footer a{
+    transition: .3s;
+}
+.footer a:hover, .redes img:hover{
+    scale: 1.2;
+}
+iframe{
+    width:100%;
+    height:300px;
+}
+@media (max-width:900px) {
+    .footer{
+        flex-direction: column;
+    }
+    .logoFooter img{
+        width: 25dvw;
+    }
+    iframe{
+        width: 60dvw;
+        height: 30dvh;
+    }
+}

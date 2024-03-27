@@ -1,0 +1,109 @@
+.pageCarrito{
+    min-height: 100dvh;
+}
+.logoConTexto img{
+    width: 12dvw;
+}
+.contenedorCarrito{
+    margin: 2dvh 10dvw 0 10dvw;
+}
+.contenedor{
+    background-color: #F5D123;
+    border: 3px solid #000;
+    border-radius:0 0 2em 2em;
+    min-height: 50dvh;
+}
+.tituloContenedor{
+    color: #fff;
+    background-color: #391E1A;
+    padding: 1px;
+    border-radius: 2em 2em 0 0;
+}
+.tituloTabla{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns:1fr 3fr 1fr 1fr 1fr;
+    padding: .5em .8em;
+    font-size: 18px;
+    font-weight: 500;
+}
+.carrito{
+    overflow-y: scroll;
+    background-color: #FFDF8D;
+    margin: 0 3dvh;
+    height: 30dvh;
+    border-radius: 2em 0 0 2em;
+    padding: .5em .9em;
+}
+.carrito::-webkit-scrollbar {
+    width: 5px;
+}
+.carrito::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 15px;
+}
+.carrito::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.item{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+.detalleItem{
+    background-color: #fff;
+    border-radius: .5em;
+}
+.subtotalItem{
+    background-color: #d7d7d7;
+}
+.xItem{
+    width: 1.2em;
+    transition: .2s ease;
+}
+.xItem:hover{
+    cursor: pointer;
+    transform: scale(.8);
+}
+.imagenCarrito{
+    height: 5dvh;
+    margin: 0 auto;
+}
+.resultItem{
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+}
+.resultItem button{
+    width: 25dvw;
+}
+.totalItems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.5;
+}
+.totalItems span{
+    margin: 0 .5em;
+}
+.totalItems .resultados{
+    background-color: #fff;
+    padding: .5em 2em;
+    border-radius: 15px;
+}
+@media (max-width:900px ) {
+    .logoConTexto img{
+        width: 20dvw;
+    }
+}
+@media (max-width:550px) {
+    .logoConTexto img{
+        width: 30dvw;
+    }
+}
+@media (max-width:400px) {
+    .logoConTexto img{
+        width: 40dvw;
+    }
+}

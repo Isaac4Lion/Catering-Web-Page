@@ -1,0 +1,112 @@
+.pageAdmin{
+    min-height: 100dvh;
+}
+.pageAdmin .botonRegresar{
+    border: 0;
+    background-color: #F5BA23;
+}
+.pageAdmin .botonRegresar img{
+    filter: invert(1);
+}
+.contenedorAdminOpciones{
+    margin: 2dvh 10dvw 0 10dvw;
+}
+
+.tituloContenedor{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #391E1A;
+    border-radius: 2em 2em 0 0;
+}
+.tituloContenedor h2{
+    margin: .2em 0;
+}
+.contenedorAdminOpcion{
+    background-color: #F5BA23;
+    border-radius:0 0 2em 2em;
+    padding:3em 7em;
+}
+.inputAdminOpcion{
+    text-align: start;
+    font-size: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr 2fr .5fr;
+    align-items: center;
+    gap: .5em;
+    padding-bottom: .5em;
+}
+.inputAdminOpcion input{
+    background-color: #fff;
+    color: #000;
+    border: 0;
+    border-radius: 10px;
+    padding: 1em;
+    margin: .7em 0;
+}
+.inputAdminOpcion .containerSubirImagen input[type='file']{
+    display: none;
+}
+.inputAdminOpcion .subirImagen{
+    width: 100%;
+    margin-top: .5em;
+    text-align: center;
+    line-height: .9;
+    background-color: #fff;
+    color: #00000073;
+    border: 0;
+    border-radius: 10px;
+    display: inline-block;
+    padding: .7em 0;
+    cursor: pointer;
+}
+
+.inputAdminOpcion input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+.inputAdminOpcion input[type="number"]{
+    width: 25%;
+}
+@media (max-width: 900px) {
+    .inputAdminOpcion{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+@media (max-width: 900px) {
+    .tituloContenedor h2{
+        font-size: 1em;
+    }
+    .contenedorAdminOpcion{
+        padding:3em 5em;
+    }
+    
+}
+@media (max-width: 700px) {
+    .tituloContenedor h2{
+        font-size: 1em;
+    }
+    .contenedorAdminOpcion{
+        padding:2em 3em;
+    }
+    .inputAdminOpcion{
+        display: block;
+    }
+    
+}
+@media (max-width: 500px) {
+    .tituloContenedor h2{
+        font-size: .5em;
+    }
+    .contenedorAdminOpcion{
+        padding:2em 2.5em;
+    }
+    .inputAdminOpcion{
+        padding: 0;
+    }
+    .inputAdminOpcion input{
+        margin: 0;
+    }
+    
+}

@@ -1,0 +1,97 @@
+.login{
+    min-height: 100dvh;
+    background-image: url('./assets/fondoLogin.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.login .logoConTexto{
+    width: 15dvw;
+}
+
+.loginContenedor{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1;
+    text-align: start;
+
+    min-height: 50dvh;
+    width: 25dvw;
+    margin: 0 auto;
+    padding: 2em 3em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    background-color: #F5D123;
+    border-radius: 30px;
+    border: 3px solid #000;
+}
+.loginTitulo{
+    text-align: center;
+}
+.loginContenedor h2{
+    margin: 0;
+}
+.inputLogin{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    text-align: start;
+}
+.inputLogin input{
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 15px;
+    padding: 1em;
+    margin-top: .5em;
+    border: none;
+}
+.loginContenedor button{
+    margin: 0 auto;
+    width: 60%;
+    border-radius: 30px;
+}
+
+.botonRegresar{
+    position: absolute;
+    top: 2dvh;
+    left: 2dvw;
+    background-color: #F5D123;
+    border: 5px solid #000;
+    padding: 1.2em 1em;
+    border-radius: 100%;
+}
+.botonRegresar:hover{
+    border-color: #ffffff;
+    transition: border-color .2s;
+}
+.botonRegresar img{
+    width: 2dvw;
+}
+@media (max-width: 770px) {
+    .loginContenedor{
+        width: 70dvw;
+    }
+    .botonRegresar{
+        border-width: 2px;
+        padding: .8em .9em;
+    }
+    .login .logoConTexto{
+        width: 25dvw;
+    }
+}
+@media (max-width: 450px) {
+    .loginContenedor{
+        margin-top: 10dvh;
+        font-size: .9em;
+    }
+    .botonRegresar{
+        padding: .4em .7em;
+    }
+    .login .logoConTexto{
+        width: 30dvw;
+    }
+    .botonRegresar img{
+        width: 3dvw;
+    }
+}
